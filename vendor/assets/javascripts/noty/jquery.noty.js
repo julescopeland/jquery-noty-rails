@@ -237,6 +237,19 @@ if (typeof Object.create !== 'function') {
       return this;
     },
 
+    update:function (options) {
+      if(options.text){
+        this.setText(options.text)
+      }
+      if(options.type){
+        this.setType(options.type)
+      }
+      if(options.timeout){
+        this.setTimeout(options.timeout)
+      }
+      return this;
+    },
+
     closed:false,
     shown:false
 
